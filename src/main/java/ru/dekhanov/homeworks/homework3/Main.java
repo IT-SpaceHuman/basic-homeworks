@@ -1,11 +1,23 @@
 package ru.dekhanov.homeworks.homework3;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        greetings();
-        checkSign(-3, 0, 4);
-        selectColor();
-        compareNumbers();
-        addOrSubtractAndPrint(89, 68, true);
+        Scanner scanner = new Scanner(System.in);
+        int userNumber = scanner.nextInt();
+
+        if (userNumber == 1) {
+            greetings();
+        } else if (userNumber == 2) {
+            checkSign((int)(Math.random()*101),(int)(Math.random()*101),(int)(Math.random()*101));
+        } else if (userNumber == 3) {
+            selectColor();
+        } else if (userNumber == 4) {
+            compareNumbers();
+        } else if (userNumber == 5) {
+            addOrSubtractAndPrint((int)(Math.random()*101),(int)(Math.random()*101), Math.random() > 0.5);
+        }
     }
 
     public static void greetings() {
@@ -25,7 +37,7 @@ public class Main {
     }
 
     public static void selectColor() {
-        int data = 4;
+        int data = (int)(Math.random()*101);
         if (data <= 10) {
             System.out.println("Красный");
         } else if (data <= 20) {
@@ -36,8 +48,8 @@ public class Main {
     }
 
     public static void compareNumbers() {
-        int a = 4;
-        int b = 6;
+        int a = (int)(Math.random()*101);
+        int b = (int)(Math.random()*101);
         if (a > b) {
             System.out.println("a" + ">=" + "b");
         } else {
