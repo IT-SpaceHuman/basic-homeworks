@@ -35,7 +35,7 @@ public class Main2 {
 
     public static void increasedByInt(int a, int[] c) {
         for (int i = 0; i < c.length; i++) {
-            c[i] = c[i] * a;
+            c[i] = c[i] + a;
         }
         System.out.println(Arrays.toString(c));
     }
