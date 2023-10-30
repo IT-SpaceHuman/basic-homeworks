@@ -32,8 +32,8 @@ public class HomeWork5 {
     }
 
     public static void squareofInt(int size) {
-        for (int i = 0; i <= size; i++) {
-            for (int j = 0; j <= size; j++) {
+        for (int i = 0; i <= size + 1; i++) {
+            for (int j = 0; j <= size + 1; j++) {
                 System.out.print("*" + " ");
             }
             System.out.println();
@@ -85,7 +85,7 @@ public class HomeWork5 {
         if (array.length <= 1) {
             sum = -1;
         } else {
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < array[1].length; i++) {
                 sum += array[1][i];
             }
         }
